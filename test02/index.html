@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>mochaとchaiをブラウザで使う</title>
+  </head>
+  <body>
+    <div id="mocha"></div>
+
+    <script type="text/javascript" src="mocha.js"></script>
+    <script type="text/javascript" src="chai.js"></script>
+
+    <script type="text/javascript">
+
+      mocha.setup('bdd');
+
+      var assert = chai.assert;
+      var expect = chai.expect;
+      chai.Should();
+    </script>
+
+    <script type="text/javascript" src="index.js"></script>
+
+    <script type="text/javascript">
+      mocha.checkLeaks();
+      mocha.run();
+    </script>
+  </body>
+</html>
